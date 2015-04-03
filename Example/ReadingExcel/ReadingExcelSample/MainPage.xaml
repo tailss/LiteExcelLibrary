@@ -1,0 +1,23 @@
+﻿<UserControl xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="ReadingExcelSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button  x:Name="btnSelectFile" Width="161" Height="20" Content="Select Excel File" Margin="10,10,10,10" IsEnabled="True" Click="btnSelectFile_Click" />
+            </StackPanel>
+
+            <toolkit:BusyIndicator x:Name="bsyImport"  DisplayAfter="0" Margin="10,0,0,0">
+                <StackPanel Orientation="Vertical" x:Name="stkContainer" Margin="20,0,0,0">
+                    <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="textBox1"  Height="350" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                </StackPanel>
+            </toolkit:BusyIndicator>
+        </StackPanel>
+    </Grid>
+</UserControl>
